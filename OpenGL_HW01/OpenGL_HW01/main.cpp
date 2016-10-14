@@ -65,6 +65,82 @@ void display(void)
     
     // do something awesome here
     
+    glEnable(GL_BLEND); // 開啟混成
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_DST_COLOR);//混成的規則
+    glDisable(GL_DEPTH_TEST); // 關閉深度測試 (使用混成時)
+    glColorMaterial(GL_FRONT_AND_BACK, GL_EMISSION); // 使用GL_EMISSION
+    
+    // Draw cube (with 6 quards)
+    glPushMatrix();
+    glTranslated(0.0, 1.8, -5.0);
+    glRotatef(angle, 1 , 1, 0);
+    glRotatef(angle, 0 , 1, 1);
+    glRotatef(angle, 1 , 0, 1);
+    
+    glBegin(GL_QUADS);
+    // top
+    glColor4f(1.0f, 0.0f, 0.0f , 0.4f);
+    glNormal3f(0.0f, 1.0f, 0.0f);   // 指定法相量 (讓light照在上面時正常)
+    glVertex3f(-0.5f, 0.5f, 0.5f);
+    glVertex3f(0.5f, 0.5f, 0.5f);
+    glVertex3f(0.5f, 0.5f, -0.5f);
+    glVertex3f(-0.5f, 0.5f, -0.5f);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    // front
+    glColor4f(0.0f, 1.0f, 0.0f , 0.4f);
+    glNormal3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(0.5f, -0.5f, 0.5f);
+    glVertex3f(0.5f, 0.5f, 0.5f);
+    glVertex3f(-0.5f, 0.5f, 0.5f);
+    glVertex3f(-0.5f, -0.5f, 0.5f);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    // right
+    glColor4f(0.0f, 0.0f, 1.0f,0.4f);
+    glNormal3f(1.0f, 0.0f, 0.0f);
+    glVertex3f(0.5f, 0.5f, -0.5f);
+    glVertex3f(0.5f, 0.5f, 0.5f);
+    glVertex3f(0.5f, -0.5f, 0.5f);
+    glVertex3f(0.5f, -0.5f, -0.5f);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    // left
+    glColor4f(0.5f, 0.5f, 0.5f ,0.4f);
+    glNormal3f(-1.0f, 0.0f, 0.0f);
+    glVertex3f(-0.5f, -0.5f, 0.5f);
+    glVertex3f(-0.5f, 0.5f, 0.5f);
+    glVertex3f(-0.5f, 0.5f, -0.5f);
+    glVertex3f(-0.5f, -0.5f, -0.5f);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    // bottom
+    glColor4f(0.0f, 0.5f, 0.5f ,0.4f);
+    glNormal3f(0.0f, -1.0f, 0.0f);
+    glVertex3f(0.5f, -0.5f, 0.5f);
+    glVertex3f(-0.5f, -0.5f, 0.5f);
+    glVertex3f(-0.5f, -0.5f, -0.5f);
+    glVertex3f(0.5f, -0.5f, -0.5f);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    // back
+    glColor4f(5.0f, 0.5f, 0.0f ,0.4f);
+    glNormal3f(0.0f, 0.0f, -1.0f);
+    glVertex3f(0.5f, 0.5f, -0.5f);
+    glVertex3f(0.5f, -0.5f, -0.5f);
+    glVertex3f(-0.5f, -0.5f, -0.5f);
+    glVertex3f(-0.5f, 0.5f, -0.5f);
+    glEnd();
+    
+    glPopMatrix();
+    
+    //------------------------------------------------------------
+    
 
     glDisable(GL_BLEND);
     glEnable(GL_DEPTH_TEST);
@@ -139,79 +215,6 @@ void display(void)
     // ----------------------------------------------------------
     
     
-    glEnable(GL_BLEND); // 開啟混成
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_DST_COLOR);//混成的規則
-    glDisable(GL_DEPTH_TEST); // 關閉深度測試 (使用混成時)
-    glColorMaterial(GL_FRONT_AND_BACK, GL_EMISSION); // 使用GL_EMISSION
-    
-    // Draw cube (with 6 quards)
-    glPushMatrix();
-        glTranslated(0.0, 1.8, 0.0);
-        glRotatef(angle, 1 , 1, 0);
-        glRotatef(angle, 0 , 1, 1);
-        glRotatef(angle, 1 , 0, 1);
-    
-        glBegin(GL_QUADS);
-        // top
-        glColor4f(1.0f, 0.0f, 0.0f , 0.4f);
-        glNormal3f(0.0f, 1.0f, 0.0f);   // 指定法相量 (讓light照在上面時正常)
-        glVertex3f(-0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, 0.5f, -0.5f);
-        glVertex3f(-0.5f, 0.5f, -0.5f);
-        glEnd();
-    
-        glBegin(GL_QUADS);
-        // front
-        glColor4f(0.0f, 1.0f, 0.0f , 0.4f);
-        glNormal3f(0.0f, 0.0f, 1.0f);
-        glVertex3f(0.5f, -0.5f, 0.5f);
-        glVertex3f(0.5f, 0.5f, 0.5f);
-        glVertex3f(-0.5f, 0.5f, 0.5f);
-        glVertex3f(-0.5f, -0.5f, 0.5f);
-        glEnd();
-    
-        glBegin(GL_QUADS);
-        // right
-        glColor4f(0.0f, 0.0f, 1.0f,0.4f);
-        glNormal3f(1.0f, 0.0f, 0.0f);
-        glVertex3f(0.5f, 0.5f, -0.5f);
-        glVertex3f(0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, -0.5f, 0.5f);
-        glVertex3f(0.5f, -0.5f, -0.5f);
-        glEnd();
-    
-        glBegin(GL_QUADS);
-        // left
-        glColor4f(0.5f, 0.5f, 0.5f ,0.4f);
-        glNormal3f(-1.0f, 0.0f, 0.0f);
-        glVertex3f(-0.5f, -0.5f, 0.5f);
-        glVertex3f(-0.5f, 0.5f, 0.5f);
-        glVertex3f(-0.5f, 0.5f, -0.5f);
-        glVertex3f(-0.5f, -0.5f, -0.5f);
-        glEnd();
-    
-        glBegin(GL_QUADS);
-        // bottom
-        glColor4f(0.0f, 0.5f, 0.5f ,0.4f);
-        glNormal3f(0.0f, -1.0f, 0.0f);
-        glVertex3f(0.5f, -0.5f, 0.5f);
-        glVertex3f(-0.5f, -0.5f, 0.5f);
-        glVertex3f(-0.5f, -0.5f, -0.5f);
-        glVertex3f(0.5f, -0.5f, -0.5f);
-        glEnd();
-    
-        glBegin(GL_QUADS);
-        // back
-        glColor4f(5.0f, 0.5f, 0.0f ,0.4f);
-        glNormal3f(0.0f, 0.0f, -1.0f);
-        glVertex3f(0.5f, 0.5f, -0.5f);
-        glVertex3f(0.5f, -0.5f, -0.5f);
-        glVertex3f(-0.5f, -0.5f, -0.5f);
-        glVertex3f(-0.5f, 0.5f, -0.5f);
-        glEnd();
-    
-    glPopMatrix();
     
     
     angle += delta;
