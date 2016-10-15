@@ -72,7 +72,8 @@ void display(void)
     
     // Draw cube (with 6 quards)
     glPushMatrix();
-    glTranslated(0.0, 1.8, -5.0);
+    glTranslated(0.0, 1.8, 0.0);
+    glScaled(1.5, 1.5, 1.5);
     glRotatef(angle, 1 , 1, 0);
     glRotatef(angle, 0 , 1, 1);
     glRotatef(angle, 1 , 0, 1);
@@ -148,7 +149,7 @@ void display(void)
     glColorMaterial(GL_FRONT, GL_DIFFUSE );  // 當有燈時,需設定,才可讓color3f/4f顯示出顏色
     
     // Draw Apple ------------------------------------
-    glColor3f(0.75 , 0.75, 0.75 );
+    glColor3f(1.0 , 1.0, 1.0);
     glPushMatrix();
         glTranslated(1.5, 0, 0);
         if(Mode == 0){                      // Mode : 0 一般模式
