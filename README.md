@@ -6,3 +6,6 @@ Homework 01 : PPAP
 ![](https://github.com/ric113/NCTU-Course---Computer-Graphics/blob/master/OpenGL_HW01/DIsplay.png)
 * Exit (press 'Esc')
 
+Homework 02 : Stencil/Depth buffer blending
+
+
