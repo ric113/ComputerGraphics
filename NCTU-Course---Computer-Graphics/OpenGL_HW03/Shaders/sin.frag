@@ -16,7 +16,7 @@ uniform int CurrentShadeMode;
 
 void main() {
 
-	// lightcolor = vec3(1.0)
+	// lightColor 為白光 , 因此是vec3(1.0) .
 	
 	// Ambient
     float ambientStrength = 0.1;
