@@ -16,10 +16,13 @@ Homework 03 : Shading
 	https://learnopengl-cn.github.io/
 
 	 VAO/VBO :
-		[VAO/VBO2](https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/)
-		[VAO/VBO2](http://blog.csdn.net/xiajun07061225/article/details/7628146)
+		VAO/VBO1:
+			https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
+		VAO/VBO2:
+			http://blog.csdn.net/xiajun07061225/article/details/7628146
 	 Uniform :
-		[Uniform](https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#uniform)
+		Uniform: 
+			https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#uniform
 
 助教提供的Library :
 	
