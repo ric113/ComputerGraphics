@@ -22,14 +22,15 @@ Homework 03 : Shading
 		https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#uniform
 
 助教提供的Library :
-	glm/		 : 和Model相關的一些DataStructure & function
-	shader_lib/  : CreateShader()/CreateProgram()/UseProgram()
+	
+	- glm/		 : 和Model相關的一些DataStructure & function
+	- shader_lib/  : CreateShader()/CreateProgram()/UseProgram()
 
 使用的 Phong Shading 公式 :
-	I = Ka+Texture.rgb(l⋅n)+Ks(v⋅r)^α
-	I : 最後的outColor , Ka(float) : ambient 強度 , l : ligntPos - Pos
-	n : Normal , Ks(float) : Specular 強度 , v : viewPos - Pos
-	r : 光反射方向 , α(int) : 常數
+	- 	I = Ka+Texture.rgb(l⋅n)+Ks(v⋅r)^α
+	- 	I : 最後的outColor , Ka(float) : ambient 強度 , l : ligntPos - Pos
+	- 	n : Normal , Ks(float) : Specular 強度 , v : viewPos - Pos
+	- 	r : 光反射方向 , α(int) : 常數
 
 Flat Shading :
 	將每個Vertex的Normal都使用該三角形的Normal即可 , 並取消Specular效果(僅用Ambient & Diffuse) .
