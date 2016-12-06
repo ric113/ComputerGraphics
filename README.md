@@ -16,10 +16,10 @@ Homework 03 : Shading
 	https://learnopengl-cn.github.io/
 
 	 VAO/VBO :
-		https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
-		http://blog.csdn.net/xiajun07061225/article/details/7628146
+		VAO/VBO 1(https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/)
+		VAO/VBO 2(http://blog.csdn.net/xiajun07061225/article/details/7628146)
 	 Uniform :
-		https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#uniform
+		Uniform(https://learnopengl-cn.github.io/01%20Getting%20started/05%20Shaders/#uniform)
 
 助教提供的Library :
 	
@@ -34,5 +34,6 @@ Homework 03 : Shading
 	 	r : 光反射方向 , α(int) : 常數
 
 Flat Shading :
+	
 	將每個Vertex的Normal都使用該三角形的Normal即可 , 並取消Specular效果(僅用Ambient & Diffuse) .
 
