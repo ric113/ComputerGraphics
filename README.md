@@ -37,11 +37,11 @@
 	 	n : Normal , Ks(float) : Specular 強度 , v : viewPos - Pos
 	 	r : 光反射方向 , α(int) : 常數
 Result :
-![](https://github.com/ric113/NCTU-Course---Computer-Graphics/tree/master/NCTU-Course---Computer-Graphics/OpenGL_HW03/PhongShading.png)
+![](https://github.com/ric113/NCTU-Course---Computer-Graphics/blob/master/OpenGL_HW03/PhongShading.png)
 
 Flat Shading :
 	
 	將每個Vertex的Normal都使用該三角形的Normal即可 , 並取消Specular效果(僅用Ambient & Diffuse) .
 Result :
-![](https://github.com/ric113/NCTU-Course---Computer-Graphics/tree/master/NCTU-Course---Computer-Graphics/OpenGL_HW03/FlatShading.png)
+![](https://github.com/ric113/NCTU-Course---Computer-Graphics/blob/master/OpenGL_HW03/FlatShading.png)
 
